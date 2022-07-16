@@ -54,3 +54,9 @@ View(sim)
 (data_slice<-sim[c(1,3,5,9,17,21,25,27,29,31),])
 names(data_slice)<-c("ID","model_type","perc_time_spent_near_model")
 write.csv(data_slice,"assets/r_outputs/darter_data_table_for_P1.csv",row.names = F)
+
+
+
+
+
+

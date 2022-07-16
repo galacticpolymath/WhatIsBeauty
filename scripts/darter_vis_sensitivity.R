@@ -67,29 +67,28 @@ names(manual_colors)<-as.character(spec_data$wavelength)
 #Make negative numbers 0
 spec_data$LWS<-ifelse(spec_data$LWS<0,0,spec_data$LWS)
 
-ggplot(spec_data) + geom_smooth(formula="y~x",aes(x = wavelength, y = LWS), method="loess",se = FALSE,size=2,colour=gpColors("galactic black"),span=0.1) +
+(g1 <- ggplot(spec_data) +
+  geom_smooth(formula="y~x",aes(x = wavelength, y = LWS), method="loess",se = FALSE,size=2,colour=gpColors("galactic black"),span=0.1) +
   geom_smooth(formula="y~x",aes(x = wavelength, y = MWS), method="loess",se = FALSE,size=2,linetype="dashed",colour=gpColors("galactic black"),span=0.1) +
-  theme_galactic(text.cex = 1.5,pad.outer = rep(10,4)) +
-  ylab("Darter Visual Stimulation") + xlab("Wavelength of Light (nm)")+
+  theme_galactic(pad.outer = rep(20,4)) +
+  ylab("Darter Visual Excitation") + xlab("Wavelength of Light (nm)")+
   # ggplot2::geom_vline(xintercept=570,linetype="dashed",color="orange")+
   # ggplot2::geom_vline(xintercept=584,color="red")+
-  coord_cartesian(ylim=c(0,1.1),clip="off",expand=F)
+  scale_y_continuous(labels = scales::percent))
   #Add spectrum below graph
   #geom_segment(aes(x=wavelength,xend=wavelength,y=-0.25,yend=-0.15,col=as.character(wavelength)),show.legend = F)+
   #scale_color_manual(values=manual_colors)+
   #geom_rect(xmin=300,xmax=380,ymin=-0.25,ymax=-0.15,fill="gray35")+
   #annotate("text",x=340,y=-0.2,label="UV",vjust=0.5,size=10,col="gray80")
-gpsave("darter_vis_sensitivity_curve.png")
-#This peak doesn't match expectations (the preferred orange model is at 570 :shrug:)
-#
+gpsave(plot=g1,"darter_vis_excitation_curve.png",width=10,height=10*9/16)
 
 
 
 #Try another dataset from Jenny
-(spec_data2<-read_excel("data/GovardovskiiA1A2.xls","Sheet1"))
+(spec_data2<-read_excel("data/orig-client-data_NoEdit/GovardovskiiA1A2.xls","Sheet1"))
 ggplot(spec_data2) + geom_smooth(formula="y~x",aes(x = wavelength...4, y = `spectrum (600.65 nm)`), method="loess",se = FALSE,color=gpPal[[1]]$hex[1],size=2) +
   theme_galactic(text.cex = 1.5) +
   ylim(0,1)+
-  ylab("Darter Visual Sensitivity") + xlab("Wavelength (nm)")+
+  ylab("Darter Visual Excitation") + xlab("Wavelength (nm)")+
   ggplot2::geom_vline(xintercept=570,linetype="dashed",color="orange")+
   ggplot2::geom_vline(xintercept=584,color="red")

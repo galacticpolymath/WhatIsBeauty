@@ -2,13 +2,16 @@ id: 5
 ShortTitle: WhatIsBeauty
 Language: English
 Country: United States
+DefaultLanguage: English
+DefaultCountry: United States
 lang: en
 lng: eng
 locale: en-US
-TemplateVer: 0.3.3
-galacticPubsVer: 0.8.2
+DefaultLocale: en-US
+TemplateVer: 0.3.4
+galacticPubsVer: 0.8.4
 FirstPublicationDate: 2022-07-11 21:10:05
-LastUpdated: 2022-07-11 21:10:05
+LastUpdated: 2022-07-15 23:24:14
 URL: https://galacticpolymath.com/lessons/5
 GPCatalogPath: https://catalog.galacticpolymath.com/lessons/WhatIsBeauty/LESSON.json
 GitHubPath: git@github.com:galacticpolymath/WhatIsBeauty.git

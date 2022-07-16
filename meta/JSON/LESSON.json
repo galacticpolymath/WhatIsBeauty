@@ -3,13 +3,16 @@
   "ShortTitle": "WhatIsBeauty",
   "Language": "English",
   "Country": "United States",
+  "DefaultLanguage": "English",
+  "DefaultCountry": "United States",
   "lang": "en",
   "lng": "eng",
   "locale": "en-US",
-  "TemplateVer": "0.3.3",
-  "galacticPubsVer": "0.8.2",
+  "DefaultLocale": "en-US",
+  "TemplateVer": "0.3.4",
+  "galacticPubsVer": "0.8.4",
   "FirstPublicationDate": "2022-07-11 21:10:05",
-  "LastUpdated": "2022-07-11 21:10:05",
+  "LastUpdated": "2022-07-15 23:24:14",
   "URL": "https://galacticpolymath.com/lessons/5",
   "GPCatalogPath": "https://catalog.galacticpolymath.com/lessons/WhatIsBeauty/LESSON.json",
   "GitHubPath": "git@github.com:galacticpolymath/WhatIsBeauty.git",
@@ -142,11 +145,11 @@
                       "links": [
                         {
                           "linkText": "PDF",
-                          "url": "https://docs.google.com/document/d/1NjSu7JWadkbN8qN5i5XnEwqrB8y7lmI1Kc3MvkLckwg/export?format=pdf"
+                          "url": "https://docs.google.com/document/d/13N7umQ-WH3RmTcFLd5DmbnnpwrJzMb2bDeAw7ZByl7o/export?format=pdf"
                         },
                         {
                           "linkText": "Copy to My Google Drive",
-                          "url": "https://docs.google.com/document/d/1NjSu7JWadkbN8qN5i5XnEwqrB8y7lmI1Kc3MvkLckwg/"
+                          "url": "https://docs.google.com/document/d/13N7umQ-WH3RmTcFLd5DmbnnpwrJzMb2bDeAw7ZByl7o/"
                         }
                       ]
                     }
